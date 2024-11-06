@@ -3,14 +3,31 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.AlphaComposite;
 
+/**
+ * The Coloured glass decorator for exercise B
+ */
 public class ColouredGlassDecorator extends Decorator {
     private int thickness;
 
+    /**
+     * Instantiates a new Coloured glass decorator.
+     *
+     * @param component the component
+     * @param x         the x
+     * @param y         the y
+     * @param width     the width
+     * @param height    the height
+     */
     public ColouredGlassDecorator(Component component, int x, int y, int width, int height) {
         super(component, x, y, width, height);
         this.thickness = thickness;
     }
 
+    /**
+     * Draw transparent "glass" layer
+     *
+     * @param g the Graphics input parameter
+     */
     @Override
     public void draw(Graphics g) {
         super.draw(g);
